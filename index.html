@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Array in Descending Order</title>
+</head>
+<body>
+    <h1>Sorting an Array in Descending Order</h1>
+    
+    <script>
+        // Define a function to sort an array in descending order
+        function sortDescending(arr) {
+            // Use the sort() method with a custom comparison function
+            arr.sort(function(a, b) {
+                // To sort in descending order, return a negative value if b should come before a,
+                // a positive value if a should come before b, and 0 if they are equal.
+                return b - a;
+            });
+        }
+
+        // Example array to sort
+        const numbers = [5, 2, 9, 1, 5, 6];
+
+        // Call the sortDescending function to sort the array in descending order
+        sortDescending(numbers);
+
+        // Display the sorted array
+        document.write("<p>Sorted Array in Descending Order: " + numbers.join(", ") + "</p>");
+    </script>
+</body>
+</html>
